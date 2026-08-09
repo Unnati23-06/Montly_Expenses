@@ -855,6 +855,12 @@ a:hover {
     font-size: var(--font-size-sm);
   }
 
+  /* Ensure table container can scroll horizontally on small devices */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .dynamic-table th,
   .dynamic-table td {
     padding: var(--spacing-sm);
@@ -872,6 +878,15 @@ a:hover {
   .btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* Improve hiding sidebar on small screens (use display none for hidden state) */
+@media (max-width: 768px) {
+  .sidebar.hidden {
+    display: none;
+    transform: none;
+    visibility: hidden;
   }
 }
 

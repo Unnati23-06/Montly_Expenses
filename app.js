@@ -170,6 +170,20 @@ function setupEventListeners() {
     }
   });
 
+  // Close the sidebar automatically on mobile after selecting a nav item
+  document.querySelectorAll('.sidebar-nav .nav-item').forEach((nav) => {
+    nav.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        const sidebar = elements.sidebar || document.querySelector('.sidebar');
+        const main = document.querySelector('.main-content');
+        if (sidebar) {
+          sidebar.classList.add('hidden');
+        }
+        if (main) main.classList.add('fullwidth');
+      }
+    });
+  });
+
   // Modal close on background click
   elements.successModal?.addEventListener('click', (e) => {
     if (e.target === elements.successModal) {
