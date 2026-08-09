@@ -2,11 +2,6 @@
 
 Build a modern, fully responsive web application for managing monthly financial returns with dynamic receipt/payment entries, instant balance calculations, form validation, submit confirmation, and local storage persistence.
 
-## User Review Required
-
-> [!NOTE]
-> The app will be created in `C:\Users\Unnati\.gemini\antigravity\scratch\monthly-returns-app`.
-> It uses pure HTML5, modern CSS3 (with CSS variables, flexbox, grid, glassmorphism design system), and clean vanilla JavaScript ES6 (no external frameworks required).
 
 ## Proposed Architecture & Features
 
@@ -56,16 +51,3 @@ Build a modern, fully responsive web application for managing monthly financial 
   - `index.html` — Semantic HTML5 markup with sidebar, header, form sections, dynamic tables, and modal dialogs.
   - `styles.css` — Modern design system with CSS custom properties, glassmorphism, animations, responsive grid/flexbox layouts.
   - `app.js` — ES6 modular JavaScript handling DOM manipulations, event delegation, dynamic row creation, live calculations, validation rules, modal toggles, and `localStorage` persistence.
-
-## Verification Plan
-
-### Automated & Sanity Checks
-- Test HTML validity and structure.
-- Verify browser execution with local static server (`npx http-server` or `npx vite` / `python -m http.server`).
-
-### Manual Verification
-1. **Dynamic Row Addition/Deletion**: Add new rows to Receipts and Payments tables, verify row count updates and deletion logic.
-2. **Instant Calculation**: Change Opening Balance, Income Amounts, and Expense Amounts; verify Total Receipts, Total Payments, and Closing Balance update instantly.
-3. **Form Validation**: Test empty required fields; verify Submit button remains disabled and error states appear. Complete form and verify Submit button unlocks.
-4. **Submission**: Click Submit, verify success modal appears without page reload.
-5. **LocalStorage Persistence**: Fill out form data, reload the page, and confirm all inputs and rows are restored.
